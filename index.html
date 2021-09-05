@@ -154,12 +154,10 @@
 
 <body>
 
-
   <div style="max-width: 500px; margin-left: auto; margin-right: auto; margin-top: 20px;">
 
     <!-- Сообщение которое будем показывать при успешной отправки формы -->
     <div class="form-result d-none">Форма успешно отправлена!</div>
-
     <!-- Форма -->
     <form id="form" action="/assets/php/process-form.php" method="post" novalidate>
       <!-- Капча -->
@@ -180,13 +178,7 @@
 
   </div>
 
-
-
-
-
-
   <script>
-
     const refreshCaptcha = (target) => {
       const captchaImage = target.closest('.captcha__image-reload').querySelector('.captcha__image');
       captchaImage.src = '/examples/libs/captcha/captcha.php?r=' + new Date().getUTCMilliseconds();
