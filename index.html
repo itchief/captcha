@@ -189,7 +189,7 @@
 
     const refreshCaptcha = (target) => {
       const captchaImage = target.closest('.captcha__image-reload').querySelector('.captcha__image');
-      captchaImage.src = '/assets/php/captcha.php';
+      captchaImage.src = '/examples/libs/captcha/captcha.php?r=' + new Date().getUTCMilliseconds();
     }
 
     const captchaBtn = document.querySelector('.captcha__refresh');
