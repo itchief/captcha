@@ -4,7 +4,7 @@
 session_start();
 $captcha = $_SESSION['captcha'];
 unset($_SESSION['captcha']);
-session_destroy();
+session_write_close();
 // 1b
 //$captcha = $_COOKIE['captcha'];
 //unset($_COOKIE['captcha']);

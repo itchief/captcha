@@ -14,7 +14,7 @@ if (USE_SESSION) {
   // 2a. Используем сессию
   session_start();
   $_SESSION['captcha'] =  crypt($code, '$1$itchief$7');
-  session_destroy();
+  session_write_close();
 } else {
   // 2a. Используем куки (время действия 600 секунд)
   $value = crypt($code, '$1$itchief$7');
